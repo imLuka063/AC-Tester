@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+}
+
+#cheat-container {
+    background: rgba(30, 30, 50, 0.95);
+    padding: 32px 48px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px #822fac, 0 0 60px rgba(130, 47, 172, 0.3);
+    text-align: center;
+    border: 1px solid #822fac;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#cheat-container h1 {
+    color: #822fac;
+    margin-bottom: 24px;
+    text-shadow: 0 0 10px #822fac;
+}
+
+#cheat-container button {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    background: #822fac;
+    color: #fff;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 12px #822fac;
+}
+
+#cheat-container button:hover {
+    background: #a347d6;
+    box-shadow: 0 0 20px #a347d6;
+}
+
+.cheat-option {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 14px;
+    gap: 12px;
+}
+
+.cheat-option label {
+    color: #ddd;
+    font-size: 1.05em;
+    cursor: pointer;
+}
+
+.cheat-option input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #822fac;
+    cursor: pointer;
+    box-shadow: 0 0 8px #822fac;
+}
+
+#drawlines-settings label {
+    margin-right: 10px;
+}
+
+#drawlines-distance {
+    width: 100px;
+    margin: 0 10px;
+    background-color: #1a1a2e;
+    border: 1px solid #822fac;
+    border-radius: 6px;
+    padding: 5px;
+    color: #fff;
+}
+
+#warpBtn {
+    margin-top: 16px;
+    background: #822fac;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    padding: 10px 24px;
+    box-shadow: 0 0 12px #822fac;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+#warpBtn:hover {
+    background: #a347d6;
+    box-shadow: 0 0 18px #a347d6;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}

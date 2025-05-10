@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Luka Cheat Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <canvas id="fov-canvas" style="position:fixed; left:0; top:0; width:100vw; height:100vh; pointer-events:none; z-index:10000;"></canvas>
+    <div id="cheat-container">
+        <h1>Luka Anticheat Tester</h1>
+        <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 24px;">
+            <div style="flex:1;">
+                <div class="cheat-option">
+                    <input type="checkbox" id="aimbot">
+                    <label for="aimbot">Aimbot</label>
+                </div>
+                <div class="cheat-option">
+                    <input type="checkbox" id="aimbotnpc">
+                    <label for="aimbotnpc">Aimbot NPC</label>
+                </div>
+                <div style="margin-top:18px; margin-bottom:8px; padding:12px 0; border-top:1px solid #444; border-bottom:1px solid #444;">
+                    <label for="fov-slider" style="color:#fff; font-weight:bold;">FOV Kreis</label>
+                    <div style="display:flex; align-items:center; gap:12px; margin-top:8px;">
+                        <input type="range" id="fov-slider" min="1" max="180" value="60">
+                        <span id="fov-slider-value" style="color:#fff;">60</span>°
+                        <input type="color" id="fov-color" value="#e74c3c" style="width:32px; height:32px; border:none; background:none;">
+                        <input type="checkbox" id="fovoverlay" style="margin-left:24px;">
+                        <label for="fovoverlay" style="color:#fff;">FOV Overlay anzeigen</label>
+                    </div>
+                </div>
+                <div class="cheat-option">
+                    <input type="checkbox" id="drawlines">
+                    <label for="drawlines">DrawLines</label>
+                    <input type="color" id="drawlines-color" value="#ff0000" style="margin-left:12px; width:28px; height:28px; border:none; background:none;">
+                </div>
+                <div class="cheat-option">
+                    <input type="checkbox" id="drawlinesnpc">
+                    <label for="drawlinesnpc">DrawLines NPC</label>
+                    <input type="color" id="drawlinesnpc-color" value="#00ff00" style="margin-left:12px; width:28px; height:28px; border:none; background:none;">
+                </div>
+                <div id="drawlines-settings" style="display:none; margin-bottom:16px;">
+                    <label for="drawlines-distance" style="color:#fff;">DrawLines Entfernung (Spieler & NPC):</label>
+                    <input type="range" id="drawlines-distance" min="1" max="100" value="100">
+                    <span id="drawlines-distance-value" style="color:#fff;">100</span> m
+                </div>
+                <div class="cheat-option">
+                    <input type="checkbox" id="nametags">
+                    <label for="nametags">NameTags</label>
+                </div>
+                <div class="cheat-option">
+                    <input type="checkbox" id="noclip">
+                    <label for="noclip">Noclip</label>
+                </div>
+            </div>
+            <div style="flex:1; display:flex; flex-direction:column; align-items:flex-end; gap:10px; margin-top:8px;">
+                <label for="exec-input" style="color:#fff; margin-bottom:4px;">Executer</label>
+                <div style="display:flex; flex-direction:row; gap:8px;">
+                    <input id="exec-input" type="text" placeholder="z.B. TriggerEvent('esx:showNotification', 'Test')" style="padding:6px 10px; border-radius:6px; border:1px solid #888; min-width:320px;">
+                    <button id="exec-btn" style="padding:6px 18px; border-radius:6px; background:#27ae60; color:#fff; border:none; cursor:pointer;">Senden</button>
+                </div>
+                <div style="display:flex; flex-direction:row; gap:8px; margin-top:8px;">
+                    <button id="client-dump-btn" style="padding:6px 18px; border-radius:6px; background:#8e44ad; color:#fff; border:none; cursor:pointer;">Client Dump</button>
+                </div>
+            </div>
+        </div>
+        <div style="margin: 18px 0 8px 0; text-align:center;">
+            <button id="warpBtn" style="padding:10px 24px; background:#3498db; color:#fff; border:none; border-radius:6px; font-size:1.1em; cursor:pointer;">Warp Into Closed Vehicle</button>
+        </div>
+        <button id="closeBtn">Schließen</button>
+        <!-- Weitere Cheat-Buttons können hier hinzugefügt werden -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
